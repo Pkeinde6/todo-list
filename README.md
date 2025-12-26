@@ -1,29 +1,32 @@
-# vue-1
+# To‑Do List (Vue 3 + Vite)
 
-This template should help get you started developing with Vue 3 in Vite.
+Application de gestion de tâches simple et rapide.
 
-## Recommended IDE Setup
+- Démo: https://pkeinde6.github.io/todo-list/
+- Code: https://github.com/Pkeinde6/todo-list
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+## Stack
+- Vue 3 (Composition API)
+- Vite 7
+- CSS
 
-## Customize configuration
-
-See [Vite Configuration Reference](https://vite.dev/config/).
-
-## Project Setup
-
-```sh
+## Installation
+```bash
+git clone https://github.com/Pkeinde6/todo-list
+cd todo-list
 npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
 npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
 npm run build
 ```
+
+## Fonctionnalités
+- Ajouter / cocher / supprimer des tâches
+- Persistance via `localStorage`
+- Filtrer : toutes / actives / terminées
+
+## Roadmap d'amélioration
+- Édition inline des tâches
+- Groupes / projets / tags
+- Animations et transitions
+- Accessibilité (clavier, ARIA)
+- Tests (Vitest)
