@@ -317,4 +317,137 @@ button[type="submit"]:hover:disabled {
   opacity: 0;
   transform: translateY(10px);
 }
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+  /* Make card a flex container to reorder elements on mobile */
+  .card {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  /* Order elements: title, subtitle, input, tasks, then shuffle button */
+  .main-title {
+    order: 1;
+    font-size: 24px;
+  }
+
+  .subtitle {
+    order: 2;
+    font-size: 15px;
+  }
+
+  .task-form {
+    order: 3;
+  }
+
+  .task-list {
+    order: 4;
+  }
+
+  /* Move shuffle button to bottom (after tasks) on mobile */
+  .carte {
+    order: 5;
+    position: static;
+    transform: none;
+    margin: 15px auto 0;
+    width: fit-content;
+  }
+
+  .carte-child {
+    padding: 15px;
+    transform: none;
+  }
+
+  .quiz-app {
+    padding: 30px 15px;
+  }
+}
+
+/* Disable hover effects on touch devices */
+@media (max-width: 768px) and (hover: none) {
+  .carte:hover {
+    transform: none;
+  }
+
+  .carte:hover .carte-child {
+    transform: none;
+  }
+
+  .carte:hover .btn {
+    transform: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .carte-child {
+    padding: 10px;
+  }
+
+  .btn {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+
+  .quiz-app {
+    padding: 20px 10px;
+  }
+
+  .card {
+    padding: 15px;
+  }
+
+  .main-title {
+    font-size: 22px;
+    margin-bottom: 8px;
+  }
+
+  .subtitle {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+
+  .input-section {
+    gap: 8px;
+  }
+
+  input[type="text"] {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+
+  button[type="submit"] {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+
+  .task-item {
+    padding: 8px 10px;
+    gap: 8px;
+  }
+
+  .task-item span {
+    font-size: 14px;
+  }
+
+  .btn-delete {
+    padding: 5px 10px;
+    font-size: 12px;
+  }
+
+  .custom-checkbox {
+    width: 18px;
+    height: 18px;
+    margin-right: 8px;
+  }
+
+  .finished {
+    font-size: 12px;
+  }
+
+  .summary {
+    font-size: 14px;
+  }
+}
 </style>
