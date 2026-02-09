@@ -320,11 +320,38 @@ button[type="submit"]:hover:disabled {
 
 /* Media Queries for Responsive Design */
 @media (max-width: 768px) {
-  /* Make shuffle button responsive instead of hiding it */
+  /* Make card a flex container to reorder elements on mobile */
+  .card {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  /* Order elements: title, subtitle, input, tasks, then shuffle button */
+  .main-title {
+    order: 1;
+    font-size: 24px;
+  }
+
+  .subtitle {
+    order: 2;
+    font-size: 15px;
+  }
+
+  .task-form {
+    order: 3;
+  }
+
+  .task-list {
+    order: 4;
+  }
+
+  /* Move shuffle button to bottom (after tasks) on mobile */
   .carte {
+    order: 5;
     position: static;
     transform: none;
-    margin: 15px auto;
+    margin: 15px auto 0;
     width: fit-content;
   }
 
@@ -335,18 +362,6 @@ button[type="submit"]:hover:disabled {
 
   .quiz-app {
     padding: 30px 15px;
-  }
-
-  .card {
-    padding: 20px;
-  }
-
-  .main-title {
-    font-size: 24px;
-  }
-
-  .subtitle {
-    font-size: 15px;
   }
 }
 
