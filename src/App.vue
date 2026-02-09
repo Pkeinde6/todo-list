@@ -333,18 +333,6 @@ button[type="submit"]:hover:disabled {
     transform: none;
   }
 
-  .carte:hover {
-    transform: none;
-  }
-
-  .carte:hover .carte-child {
-    transform: none;
-  }
-
-  .carte:hover .btn {
-    transform: none;
-  }
-
   .quiz-app {
     padding: 30px 15px;
   }
@@ -359,6 +347,21 @@ button[type="submit"]:hover:disabled {
 
   .subtitle {
     font-size: 15px;
+  }
+}
+
+/* Disable hover effects on touch devices */
+@media (max-width: 768px) and (hover: none) {
+  .carte:hover {
+    transform: none;
+  }
+
+  .carte:hover .carte-child {
+    transform: none;
+  }
+
+  .carte:hover .btn {
+    transform: none;
   }
 }
 
