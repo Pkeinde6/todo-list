@@ -320,9 +320,29 @@ button[type="submit"]:hover:disabled {
 
 /* Media Queries for Responsive Design */
 @media (max-width: 768px) {
-  /* Hide the shuffle button on tablets and mobile */
+  /* Make shuffle button responsive instead of hiding it */
   .carte {
-    display: none;
+    position: static;
+    transform: none;
+    margin: 15px auto;
+    width: fit-content;
+  }
+
+  .carte-child {
+    padding: 15px;
+    transform: none;
+  }
+
+  .carte:hover {
+    transform: none;
+  }
+
+  .carte:hover .carte-child {
+    transform: none;
+  }
+
+  .carte:hover .btn {
+    transform: none;
   }
 
   .quiz-app {
@@ -343,6 +363,15 @@ button[type="submit"]:hover:disabled {
 }
 
 @media (max-width: 480px) {
+  .carte-child {
+    padding: 10px;
+  }
+
+  .btn {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+
   .quiz-app {
     padding: 20px 10px;
   }
