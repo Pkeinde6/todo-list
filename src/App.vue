@@ -317,4 +317,90 @@ button[type="submit"]:hover:disabled {
   opacity: 0;
   transform: translateY(10px);
 }
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+  /* Hide the shuffle button on tablets and mobile */
+  .carte {
+    display: none;
+  }
+
+  .quiz-app {
+    padding: 30px 15px;
+  }
+
+  .card {
+    padding: 20px;
+  }
+
+  .main-title {
+    font-size: 24px;
+  }
+
+  .subtitle {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .quiz-app {
+    padding: 20px 10px;
+  }
+
+  .card {
+    padding: 15px;
+  }
+
+  .main-title {
+    font-size: 22px;
+    margin-bottom: 8px;
+  }
+
+  .subtitle {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+
+  .input-section {
+    gap: 8px;
+  }
+
+  input[type="text"] {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+
+  button[type="submit"] {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+
+  .task-item {
+    padding: 8px 10px;
+    gap: 8px;
+  }
+
+  .task-item span {
+    font-size: 14px;
+  }
+
+  .btn-delete {
+    padding: 5px 10px;
+    font-size: 12px;
+  }
+
+  .custom-checkbox {
+    width: 18px;
+    height: 18px;
+    margin-right: 8px;
+  }
+
+  .finished {
+    font-size: 12px;
+  }
+
+  .summary {
+    font-size: 14px;
+  }
+}
 </style>
