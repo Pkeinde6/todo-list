@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="/todo-list/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#6c63ff">
+    <meta name="description" content="Gérez vos tâches quotidiennes facilement">
+    <link rel="manifest" href="/todo-list/manifest.json">
+    <link rel="apple-touch-icon" href="/todo-list/icons/icon-192.svg">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <title>To-Do List</title>
+    <style>
+      *{
+        font-family: 'Montserrat', sans-serif;
+      }
+            body {
+  margin: 0;
+  background: #f3f1f1;
+  color: #1a1a1a;
+}
+    </style>
+    <script type="module" crossorigin src="/todo-list/assets/index-Cv4rTjar.js"></script>
+    <link rel="stylesheet" crossorigin href="/todo-list/assets/index-DuBNH_oq.css">
+  </head>
+
+  <body>
+    <div id="app"></div>
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js')
+            .then((registration) => {
+              console.log('Service Worker enregistré:', registration.scope);
+            })
+            .catch((error) => {
+              console.log('Erreur Service Worker:', error);
+            });
+        });
+      }
+    </script>
+  </body>
+</html>
